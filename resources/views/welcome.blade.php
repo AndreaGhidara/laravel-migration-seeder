@@ -30,6 +30,18 @@
                                     <th>{{ $train->arrival_time }}</th>
                                     <th>{{ $train->train_code }}</th>
                                     <th>{{ $train->train_carraiges_number }}</th>
+                                    {{-- @php
+                                        if ($train->on_time == 1) {
+                                            $train->on_time = "yes";
+                                        } else {
+                                            $train->on_time = "late";
+                                        }
+                                    @endphp --}}
+                                    @if ($train->on_time == 1)
+                                        <th>yes</th>
+                                    @else
+                                        
+                                    @endif
                                     <th>{{ $train->on_time }}</th>
                                     <th>{{ $train->train_cancelled }}</th>
                                 </tr>
