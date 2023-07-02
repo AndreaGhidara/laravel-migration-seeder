@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Guest\PageControlle;
+use App\Http\Controllers\Guest\PageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,10 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[PageControlle::class, 'index'] );
+Route::get('/', [PageController::class, 'index']);
 
 
-Route::get('/otherpage', function () {
-    $links = config('store.someLinks');
-    return view('other', compact('links'));
-});
+// Route::get('/otherpage', function () {
+//     $links = config('store.someLinks');
+//     return view('other', compact('links'));
+// });
